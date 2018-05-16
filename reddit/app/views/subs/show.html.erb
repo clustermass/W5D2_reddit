@@ -1,0 +1,20 @@
+<a href="<%= subs_url %>"> Back to all subjects</a><br>&nbsp<br>
+
+Subject Info:<br>&nbsp<br>
+
+<label>Moderator: 
+  <%=@sub.moderator.username%>
+</label><br>
+
+
+<label for=""><a href="<%=edit_sub_url(@sub)%>">
+  Title
+<%= @sub.title %> </a>
+</label><br>
+
+<label for="">
+  Description
+<%= @sub.description %>"
+</label>
+
+

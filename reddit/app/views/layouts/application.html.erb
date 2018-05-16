@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reddit</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <% if signed_in? %>
+      Welcome <%= current_user.username  %>! You are logged in!!!  👀
+      <br>
+      <form action="<%= session_url %>" method="post">
+        <%= token %>
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" name="" value="Sign out">
+      </form>
+      <% else %>
+      <a href="<%= new_user_url %>">Sign Up</a>
+      <a href="<%= new_session_url %>">Sign In  </a>
+      
+      
+      <% end %>
+    <%= yield %>
+  </body>
+</html>

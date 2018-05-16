@@ -1,0 +1,20 @@
+<h1>New Subject</h1>
+
+
+<form  action="<%= subs_url %>" method="post">
+  
+<%= token  %>
+
+<label for="">
+  Title
+<input type="text" name="sub[title]" value="<%= @sub.title %>">    
+</label>
+
+<label for="">
+  Description
+<input type="text" name="sub[description]" value="<%= @sub.description %>">    
+</label>
+
+<input type="submit" name="" value="Add Subject">
+  
+</form>

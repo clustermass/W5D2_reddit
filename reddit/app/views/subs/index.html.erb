@@ -1,0 +1,19 @@
+<a href="<%= new_sub_url  %>">Add new subject</a>&nbsp
+<br> &nbsp<br>
+<%@sub.each do |sub| %>
+<label>Moderator: 
+  <%=sub.moderator.username%>
+</label><br>
+
+
+<label for=""><a href="<%=sub_url(sub)%>">
+  Title
+<%= sub.title %> </a>
+</label><br>
+
+<label for="">
+  Description
+<%= sub.description %>"
+</label>
+<br> &nbsp<br>
+<%end %>

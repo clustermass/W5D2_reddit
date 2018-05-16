@@ -1,0 +1,22 @@
+<h1>Show Post</h1>
+
+
+<label>Title
+<%=@post.title%>
+</label>
+
+<label>URL
+  <%=@post.url%>
+</label>
+
+<label>Content
+  <%=@post.content%>
+</label>
+<label>
+  Subjects:
+  <br>
+<% @post.subs.each do |subj| %>
+<%=subj.title %>
+<br>
+<% end  %>
+</label>
